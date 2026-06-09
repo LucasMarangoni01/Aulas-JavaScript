@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faviicon Tag -->
+    <!-- <link rel="icon" href="https://www.w3schools.com/favicon.ico" type=image/jpg> -->
+    <link rel="icon" type="image/jpg" href="/icon/favoicon.jpg">
+    <title>Desafio 1 - JavaScript</title>
+    <meta name="description" content="Aula 1">
+    <meta name="keywords" content="desafio, javascript, atividade, aula">
+    <meta name="author" content="Lucas Marangoni, 11989053387, lucas.marangoni2008@gmail.com">
+</head>
+
+<body>
+    <h1><mark> MANIPULANDO ELEMENTOS (TAGS)</mark> DO HTML ATRAVÉS DO JS</h1>
+    <hr>
+    <div>
+        <p>Estamos aprendendo JAVASCRIPT</p>
+        <p>Vinland Saga é o melhor anime</p>
+        <p>Eu sou brabo</p>
+
+        <img src="img/imagem1.jpg" alt="um gato" title="Um gato espadachim">
+        <button onclick="trocarImagem()">Trocar imagem</button>
+    </div>
+
+    <script>
+        const tags_BODY = document.getElementsByTagName('body');
+        let tag_body = tags_BODY[0]
+
+        const tags_div = document.getElementsByTagName('div')
+        let tag_div = tags_div[0]
+
+        const tags_P = document.getElementsByTagName('p');
+        let tag_p_1 = tags_P[0]
+        let tag_p_2 = tags_P[1]
+        let tag_p_3 = tags_P[2]
+
+        const tags_img = document.getElementsByTagName('img')
+        let tag_img = tags_img[0]
+        tag_img.src="img/imagem2.jpg"
+        tag_img.title="Averigunado resenha"
+
+        const tags_button = document.getElementsByTagName('button');
+        let tag_button = tags_button[0] =
+        console.log(tags_BODY);
+        console.log(tags_div);
+        console.log(tags_img);
+        console.log(tags_button)
+
+        
+        function trocarImagem(){
+            tag_img.src="img/imagem1.jpg"
+        }
+        //Imagem
+        //tag_img.style.height = "50px"
+
+        //Body
+        tag_body.style.background = "green"
+        tag_body.style.fontFamily = 'Franklin Gothic Medium', 'Arial Narrow'
+        tag_body.style.color = "white"
+
+        //Div
+        tag_div.style.border = "3px solid blue"
+        tag_div.style.color = "cyan"
+        
+        //Os P's
+        tag_p_1.style.border = "1px solid cyan"
+        tag_p_2.style.border = "1px solid cyan"
+        tag_p_3.style.border = "1px solid cyan"
+
+        const novo_p = document.createElement('p');
+        novo_p.innerHTML = "Eu fui adicionado totalmente por forma DINÂMICA!"
+        tag_div.appendChild(novo_p)
+    
+        document.write('<h2>UAAAAU, <mark>JAVASCRIPT É MUITO LEGAL!</mark></h2>')
+
+
+        
+
+    </script>
+</body>
+
+</html>

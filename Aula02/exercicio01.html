@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faviicon Tag -->
+    <!-- <link rel="icon" href="https://www.w3schools.com/favicon.ico" type=image/jpg> -->
+    <link rel="icon" type="image/jpg" href="/icon/favoicon.jpg">
+    <title>Aula 02 - JavaScript</title>
+    <meta name="description" content="Aula 1">
+    <meta name="keywords" content="desafio, javascript, atividade, aula">
+    <meta name="author" content="Lucas Marangoni, 11989053387, lucas.marangoni2008@gmail.com">
+</head>
+
+<body>
+    <h1><mark> MANIPULANDO ELEMENTOS (TAGS)</mark> DO HTML ATRAVÉS DO JS</h1>
+    <hr>
+    <div>
+        <p>Estamos aprendendo JAVASCRIPT</p>
+        <hr>
+        <p>Vinland Saga é o melhor anime</p>
+        <hr>
+        <p>Eu sou brabo</p>
+    </div>
+    <script>
+        const tags_P = document.getElementsByTagName('p');
+        console.log(tags_P);
+        let tag_p_1 = tags_P[0]
+
+        tag_p_1.style.backgroundColor ="green"
+        tag_p_1.style.color = "white"
+
+        tag_p_1.style.fontSize = "30px"
+        tag_p_1.style.textAlign = "center"
+
+        tag_p_1.innerText = "A TURMA DO DEV É BRABA DEMAIS!"
+
+        let tag_p_2 = tags_P[1]
+
+        tag_p_2.style.backgroundColor ="blue"
+        tag_p_2.style.color = "cyan"
+
+        tag_p_2.style.fontSize = "25px"
+        tag_p_2.style.textAlign = "center"
+
+        let tag_p_3 = tags_P[2]
+
+        tag_p_3.style.backgroundColor = "red"
+        tag_p_3.style.color = "cyan"
+        tag_p_3.style.fontSize = "15px"
+        tag_p_3.style.textAlign = "center"
+    </script>
+</body>
+
+</html>
